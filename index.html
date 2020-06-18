@@ -64,7 +64,7 @@
           эффективные решения<br />
           для вашего бизнеса
         </h1>
-        <button class="hero__button">Заказать услугу</button>
+        <button class="hero__button" data-open-modal>Заказать услугу</button>
       </section>
       <section class="section">
         <div class="container">
@@ -510,9 +510,32 @@
           <div class="backdrop__modal-line"></div>
           <div class="backdrop__modal-comment-line"></div>
           <button class="backdrop__modal-button">Отправить</button>
-          <button class="backdrop__modal-button-close"></button>
+          <button
+            class="backdrop__modal-button-close"
+            data-close-modal
+          ></button>
         </div>
       </div>
+      <script>
+        const refs = {
+          openModalBtn: document.querySelector("[data-open-modal]"),
+          closeModalBtn: document.querySelector("[data-close-modal]"),
+          backdrop: document.querySelector("[data-backdrop]"),
+        };
+
+        refs.openModalBtn.addEventListener("click", toggleModal);
+        refs.closeModalBtn.addEventListener("click", toggleModal);
+
+        refs.backdrop.addEventListener("click", logBackdropClick);
+
+        function toggleModal() {
+          refs.backdrop.classList.toggle("is-hidden");
+        }
+
+        function logBackdropClick() {
+          console.log("Это клик в бекдроп");
+        }
+      </script>
     </footer>
   </body>
 </html>
