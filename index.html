@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
@@ -500,42 +501,54 @@
           </p>
         </div>
       </div>
-      <div class="backdrop backdrop--hidden" data-backdrop>
-        <div class="backdrop__modal">
-          <p class="backdrop__modal-heading">
-            Оставьте свои данные, мы вам перезвоним
-          </p>
-          <div class="backdrop__modal-line"></div>
-          <div class="backdrop__modal-line"></div>
-          <div class="backdrop__modal-line"></div>
-          <div class="backdrop__modal-comment-line"></div>
-          <button class="backdrop__modal-button">Отправить</button>
-          <button
-            class="backdrop__modal-button-close"
-            data-close-modal
-          ></button>
-        </div>
-      </div>
-      <script>
-        const refs = {
-          openModalBtn: document.querySelector("[data-open-modal]"),
-          closeModalBtn: document.querySelector("[data-close-modal]"),
-          backdrop: document.querySelector("[data-backdrop]"),
-        };
-
-        refs.openModalBtn.addEventListener("click", toggleModal);
-        refs.closeModalBtn.addEventListener("click", toggleModal);
-
-        refs.backdrop.addEventListener("click", logBackdropClick);
-
-        function toggleModal() {
-          refs.backdrop.classList.toggle("is-hidden");
-        }
-
-        function logBackdropClick() {
-          console.log("Это клик в бекдроп");
-        }
-      </script>
     </footer>
+    <div class="backdrop is-hidden" data-backdrop>
+      <div class="modal">
+        <p class="modal__heading">
+          Оставьте свои данные, мы вам перезвоним
+        </p>
+        <div class="modal__line"></div>
+        <div class="modal__line"></div>
+        <div class="modal__line"></div>
+        <div class="modal__comment-line"></div>
+        <button class="modal__button">Отправить</button>
+        <button class="modal__button-close" data-close-modal></button>
+      </div>
+    </div>
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector("[data-open-modal]"),
+        closeModalBtn: document.querySelector("[data-close-modal]"),
+        backdrop: document.querySelector("[data-backdrop]"),
+      };
+
+      refs.openModalBtn.addEventListener("click", toggleModal);
+      refs.closeModalBtn.addEventListener("click", toggleModal);
+
+      refs.backdrop.addEventListener("click", logBackdropClick);
+
+      function toggleModal() {
+        refs.backdrop.classList.toggle("is-hidden");
+      }
+
+      function logBackdropClick() {
+        console.log("Это клик в бекдроп");
+      }
+    </script>
+    <script>
+      (() => {
+        document
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
   </body>
 </html>
