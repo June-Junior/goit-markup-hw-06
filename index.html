@@ -503,17 +503,58 @@
       </div>
     </footer>
     <div class="backdrop is-hidden" data-backdrop>
-      <div class="modal">
+      <form class="modal js-speaker-form">
         <p class="modal__heading">
           Оставьте свои данные, мы вам перезвоним
         </p>
-        <div class="modal__line"></div>
-        <div class="modal__line"></div>
-        <div class="modal__line"></div>
-        <div class="modal__comment-line"></div>
-        <button class="modal__button">Отправить</button>
+        <div class="modal__field">
+          <label for="name"></label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Имя"
+            autofocus
+          />
+        </div>
+
+        <div class="modal__field">
+          <label for="tel"></label>
+          <input type="tel" name="tel" id="tel" placeholder="Телефон" />
+        </div>
+
+        <div class="modal__field">
+          <label for="mail"></label>
+          <input type="email" name="mail" id="mail" placeholder="Почта" />
+        </div>
+
+        <div class="modal__field">
+          <label for="comment"></label>
+          <textarea
+            class="comment"
+            name="comment"
+            id="comment"
+            rows="8"
+            placeholder="Комментарий"
+          ></textarea>
+        </div>
+
+        <div class="modal__field">
+          <input
+            class="modal__checkbox"
+            type="checkbox"
+            name="policy"
+            id="policy"
+          />
+          <label for="policy"
+            >Соглашаюсь с рассылкой и принимаю
+            <span>Условия договора</span></label
+          >
+        </div>
+
+        <button type="submit" class="modal__button">Отправить</button>
         <button class="modal__button-close" data-close-modal></button>
-      </div>
+      </form>
     </div>
     <script>
       const refs = {
