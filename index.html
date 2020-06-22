@@ -457,7 +457,7 @@
           </address>
         </div>
         <div class="footer-subdivision__social-media">
-          <b class="footer-subdivision__social-media-header">Присоединяйтесь</b>
+          <b class="footer-subdivision__header">Присоединяйтесь</b>
           <ul class="footer-subdivision__social-media-list">
             <li class="footer-subdivision__social-media-item">
               <a
@@ -489,12 +489,13 @@
             </li>
           </ul>
         </div>
-        <div class="footer-subdivision__subscription">
-          <b class="footer-subdivision__social-media-header"
-            >Подпишитесь на рассылку</b
-          >
-          <button class="footer-subdivision__button">Подписаться</button>
-        </div>
+        <form class="footer-subdivision__subscription js-speaker-form">
+          <b class="footer-subdivision__header">Подпишитесь на рассылку</b>
+          <input type="email" name="mail" placeholder="E-mail" />
+          <button type="submit" class="footer-subdivision__button">
+            Подписаться
+          </button>
+        </form>
         <div class="footer-subdivision__developers">
           <p class="footer-subdivision__developers-text">
             2020 | Developed by GoIT Students
@@ -508,24 +509,18 @@
           Оставьте свои данные, мы вам перезвоним
         </p>
         <div class="modal__field">
-          <label for="name"></label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Имя"
-            autofocus
-          />
+          <label for="name">Имя</label>
+          <input type="text" name="name" id="name" autofocus />
         </div>
 
         <div class="modal__field">
-          <label for="tel"></label>
-          <input type="tel" name="tel" id="tel" placeholder="Телефон" />
+          <label for="tel">Телефон</label>
+          <input type="tel" name="tel" id="tel" />
         </div>
 
         <div class="modal__field">
-          <label for="mail"></label>
-          <input type="email" name="mail" id="mail" placeholder="Почта" />
+          <label for="mail">Почта</label>
+          <input type="email" name="mail" id="mail" />
         </div>
 
         <div class="modal__field">
@@ -539,7 +534,7 @@
           ></textarea>
         </div>
 
-        <div class="modal__field">
+        <div class="modal__field-last">
           <input
             class="modal__checkbox"
             type="checkbox"
@@ -548,7 +543,7 @@
           />
           <label for="policy"
             >Соглашаюсь с рассылкой и принимаю
-            <span>Условия договора</span></label
+            <a class="modal__link" href="">Условия договора</a></label
           >
         </div>
 

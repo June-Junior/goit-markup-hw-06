@@ -378,6 +378,31 @@ font-family: 'Raleway', sans-serif;*/
   box-shadow: none;
   border: 1px solid rgba(0, 0, 0, 0.12);
 }
+
+.modal__field {
+  position: relative;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+
+  text-align: left;
+}
+.modal__field-last {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+}
+.modal__field label {
+  position: absolute;
+  margin-top: 12px;
+}
 .modal__field input {
   margin-bottom: 28px;
   width: 448px;
@@ -386,6 +411,7 @@ font-family: 'Raleway', sans-serif;*/
   border-radius: 4px;
 }
 .modal__field textarea {
+  padding-top: 12px;
   margin-bottom: 20px;
   width: 448px;
   height: 120px;
@@ -394,4 +420,8 @@ font-family: 'Raleway', sans-serif;*/
   resize: none;
 }
 .modal__checkbox {
+}
+.modal__link {
+  color: var(--text-hover-color);
+  text-decoration: underline;
 }
