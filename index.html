@@ -509,43 +509,72 @@
           Оставьте свои данные, мы вам перезвоним
         </p>
         <div class="modal__field">
-          <label for="name">Имя</label>
-          <input type="text" name="name" id="name" autofocus />
+          <input
+            class="modal__input"
+            type="text"
+            name="name"
+            id="name"
+            placeholder=" "
+            autofocus
+          />
+          <label class="modal__label" for="name">Имя</label>
+          <svg class="modal__svg">
+            <use href="./images/sprite.svg#icon-formname"></use>
+          </svg>
         </div>
 
         <div class="modal__field">
-          <label for="tel">Телефон</label>
-          <input type="tel" name="tel" id="tel" />
+          <input
+            class="modal__input"
+            type="tel"
+            name="tel"
+            id="tel"
+            placeholder=" "
+          />
+          <label class="modal__label" for="tel">Телефон</label>
+          <svg class="modal__svg">
+            <use href="./images/sprite.svg#icon-formphone"></use>
+          </svg>
         </div>
 
         <div class="modal__field">
-          <label for="mail">Почта</label>
-          <input type="email" name="mail" id="mail" />
+          <input
+            class="modal__input"
+            type="email"
+            name="mail"
+            id="mail"
+            placeholder=" "
+          />
+          <label class="modal__label" for="mail">Почта</label>
+          <svg class="modal__svg">
+            <use href="./images/sprite.svg#icon-formmail"></use>
+          </svg>
         </div>
 
         <div class="modal__field">
-          <label for="comment"></label>
           <textarea
             class="comment"
             name="comment"
             id="comment"
             rows="8"
-            placeholder="Комментарий"
+            placeholder=" "
           ></textarea>
+          <label class="modal__comment" for="comment">Комментарий</label>
         </div>
 
-        <div class="modal__field-last">
+        <label class="modal__field-last">
           <input
             class="modal__checkbox"
             type="checkbox"
             name="policy"
             id="policy"
           />
-          <label for="policy"
+          <span class="modal__customcheckbox"></span>
+          <span for="policy"
             >Соглашаюсь с рассылкой и принимаю
-            <a class="modal__link" href="">Условия договора</a></label
+            <a class="modal__link" href="">Условия договора</a></span
           >
-        </div>
+        </label>
 
         <button type="submit" class="modal__button">Отправить</button>
         <button class="modal__button-close" data-close-modal></button>
