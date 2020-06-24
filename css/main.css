@@ -381,6 +381,10 @@ font-family: 'Raleway', sans-serif;*/
 
 .modal__field {
   position: relative;
+  margin-bottom: 28px;
+}
+.modal__field:nth-child(5) {
+  margin-bottom: 0;
 }
 .modal__label {
   position: absolute;
@@ -400,7 +404,6 @@ font-family: 'Raleway', sans-serif;*/
 .modal__field input {
   padding-left: 42px;
   padding-right: 19px;
-  margin-bottom: 28px;
   width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
